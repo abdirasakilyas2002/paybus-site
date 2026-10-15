@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="fr"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0a1f4d">
+<link rel="icon" type="image/png" href="logo.png">
+<title>PAY BUS — Payez votre bus avec une carte</title>
+<meta name="description" content="PAY BUS : payez vos trajets en bus à Djibouti avec une simple carte sans contact. Simple, rapide, intelligent.">
+<style>
+:root{--navy:#0a1f4d;--blue:#1164ae;--green:#4daf28;--sky:#eaf3fb;--bg:#f6f9fc;--tx:#0a1f4d;--mu:#4f627f;--bd:#d6e2ef}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:#fff;color:var(--tx);font:17px/1.6 "Segoe UI",Roboto,Arial,sans-serif}
+a{color:inherit}
+.w{max-width:1040px;margin:0 auto;padding:0 20px}
+h1,h2,h3{line-height:1.15;margin:0 0 .5em;letter-spacing:-.01em}
+h1{font-size:clamp(2.3rem,6.4vw,4rem);font-weight:800}
+h2{font-size:clamp(1.6rem,4vw,2.3rem);font-weight:800}
+h3{font-size:1.15rem}
+p{margin:0 0 1em;max-width:62ch}
+header{position:sticky;top:0;z-index:5;background:#fff;border-bottom:1px solid var(--bd)}
+header .w{display:flex;align-items:center;gap:20px;height:64px}
+.logo{display:block;line-height:0}
+.logo img{height:46px;width:auto;display:block}
+header nav{margin-left:auto;display:flex;gap:22px;font-size:15px}
+header nav a{text-decoration:none;color:var(--mu)}header nav a:hover{color:var(--navy)}
+.btn{display:inline-block;background:var(--green);color:#fff;font-weight:700;text-decoration:none;padding:13px 24px;border-radius:999px;border:0;font-size:1rem}
+.btn:hover{background:#3f9520}
+.btn.o{background:none;color:var(--navy);box-shadow:inset 0 0 0 2px var(--navy)}
+.btn.o:hover{background:var(--navy);color:#fff}
+a:focus-visible,summary:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
+.hero{background:linear-gradient(180deg,var(--sky),#fff);padding:56px 0 40px;overflow:hidden}
+.hero .w{display:grid;gap:32px;grid-template-columns:1.1fr .9fr;align-items:center}
+.hero p{font-size:1.2rem;color:var(--mu)}
+.cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}
+.tag{font-weight:700;color:var(--blue);margin-bottom:10px}
+svg.il{width:100%;height:auto;display:block}
+.ok{animation:pop 5s ease-in-out infinite}
+@keyframes pop{0%,38%{opacity:0}45%,92%{opacity:1}100%{opacity:0}}
+.card{animation:tap 5s ease-in-out infinite;transform-origin:center}
+@keyframes tap{0%{transform:translate(70px,40px) rotate(-8deg)}35%,70%{transform:translate(0,0) rotate(-8deg)}100%{transform:translate(70px,40px) rotate(-8deg)}}
+@media (prefers-reduced-motion:reduce){.ok{animation:none;opacity:1}.card{animation:none;transform:rotate(-8deg)}}
+section{padding:64px 0}
+.alt{background:var(--bg)}
+.steps{display:grid;gap:18px;grid-template-columns:repeat(3,1fr);margin-top:28px;counter-reset:s}
+.step{background:#fff;border:1px solid var(--bd);border-radius:18px;padding:24px;position:relative}
+.step::before{counter-increment:s;content:counter(s);display:grid;place-items:center;width:38px;height:38px;border-radius:50%;background:var(--navy);color:#fff;font-weight:800;margin-bottom:14px}
+.step p{margin:0;color:var(--mu)}
+.price{display:grid;gap:18px;grid-template-columns:repeat(2,1fr);margin-top:28px;max-width:640px}
+.pr{border-radius:22px;padding:28px;background:var(--navy);color:#fff}
+.pr:nth-child(2){background:var(--blue)}
+.pr b{display:block;font-size:3rem;line-height:1;margin:10px 0 4px}
+.pr small{opacity:.85}
+.two{display:grid;gap:20px;grid-template-columns:repeat(2,1fr);margin-top:28px}
+.box{border:1px solid var(--bd);border-left:6px solid var(--green);border-radius:14px;padding:22px;background:#fff}
+.box p{margin:0;color:var(--mu)}
+details{border-bottom:1px solid var(--bd);padding:16px 0;max-width:720px}
+summary{cursor:pointer;font-weight:700;font-size:1.05rem}
+details p{margin:10px 0 0;color:var(--mu)}
+.ct{display:grid;gap:14px;grid-template-columns:repeat(3,1fr);margin-top:24px}
+.ct div{background:#fff;border:1px solid var(--bd);border-radius:14px;padding:18px}
+.ct b{display:block;color:var(--blue)}
+footer{background:var(--navy);color:#cfdcf0;padding:34px 0;font-size:15px}
+footer .w{display:flex;gap:16px;justify-content:space-between;flex-wrap:wrap}
+footer a{color:#fff}
+@media(max-width:760px){
+header nav{display:none}header .w{justify-content:space-between}
+.hero .w,.steps,.price,.two,.ct{grid-template-columns:1fr}
+section{padding:46px 0}
+}
+</style></head><body>
+
+<header><div class="w"><a class="logo" href="#" aria-label="PAY BUS, accueil"><img src="logo.png" alt="PAY BUS" width="256" height="102"></a>
+<nav><a href="#comment">Comment ça marche</a><a href="#tarifs">Tarifs</a><a href="#recharge">Recharger</a><a href="#proprietaires">Propriétaires</a><a href="#faq">Questions</a></nav>
+<a class="btn" href="#contact">Obtenir ma carte</a></div></header>
+
+<div class="hero"><div class="w">
+<div>
+<div class="tag">Simple. Rapide. Intelligent.</div>
+<h1>Montez. Posez votre carte. C'est payé.</h1>
+<p>Avec la carte PAY BUS, vous payez votre trajet en un geste, sans monnaie et sans attendre. Le prix est débité automatiquement et l'écran vous confirme tout de suite.</p>
+<div class="cta"><a class="btn" href="#contact">Obtenir ma carte</a><a class="btn o" href="#comment">Voir comment ça marche</a></div>
+</div>
+<svg class="il" viewBox="0 0 420 380" role="img" aria-label="Une carte PAY BUS posée sur le terminal de paiement du bus : paiement accepté">
+<rect x="10" y="300" width="400" height="14" rx="7" fill="#d6e2ef"/>
+<rect x="95" y="40" width="230" height="270" rx="30" fill="#0a1f4d"/>
+<rect x="115" y="62" width="190" height="120" rx="14" fill="#eaf3fb"/>
+<g class="ok"><circle cx="210" cy="108" r="26" fill="#4daf28"/><path d="M197 108l9 10 18-20" stroke="#fff" stroke-width="7" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="210" y="160" text-anchor="middle" font-size="18" font-weight="700" fill="#0a1f4d" font-family="Segoe UI,Arial">Accepté · 50 FDJ</text></g>
+<circle cx="210" cy="232" r="30" fill="none" stroke="#1164ae" stroke-width="5" opacity=".7"/>
+<circle cx="210" cy="232" r="17" fill="none" stroke="#1164ae" stroke-width="5" opacity=".7"/>
+<circle cx="210" cy="232" r="5" fill="#4daf28"/>
+<g class="card"><g transform="rotate(-8 210 232)"><rect x="130" y="196" width="170" height="108" rx="14" fill="#1164ae"/>
+<rect x="130" y="196" width="170" height="30" rx="14" fill="#4daf28"/>
+<text x="148" y="270" font-size="26" font-weight="900" fill="#fff" font-family="Segoe UI,Arial">PAY BUS</text>
+<text x="148" y="292" font-size="11" fill="#d6e8fa" font-family="Segoe UI,Arial">Simple. Rapide. Intelligent.</text></g></g>
+</svg>
+</div></div>
+
+<section id="comment"><div class="w">
+<h2>Trois gestes, et vous êtes en route</h2>
+<div class="steps">
+<div class="step"><h3>Prenez votre carte</h3><p>Une carte sans contact, solide, qui tient dans la poche. Un identifiant PAY BUS vous est attribué.</p></div>
+<div class="step"><h3>Rechargez-la</h3><p>Chez un agent PAY BUS ou depuis une application partenaire, du montant que vous voulez.</p></div>
+<div class="step"><h3>Posez-la sur le terminal</h3><p>Le terminal du bus vérifie votre solde et débite le trajet. Le résultat s'affiche : accepté ou refusé.</p></div>
+</div></div></section>
+
+<section id="tarifs" class="alt"><div class="w">
+<h2>Des tarifs clairs, sans surprise</h2>
+<p>Le prix du trajet dépend du type de carte. Il est le même à chaque montée.</p>
+<div class="price">
+<div class="pr">Type 1<b>50 FDJ</b><small>par trajet</small></div>
+<div class="pr">Type 2<b>40 FDJ</b><small>par trajet</small></div>
+</div></div></section>
+
+<section id="recharge"><div class="w">
+<h2>Rechargez comme ça vous arrange</h2>
+<div class="two">
+<div class="box"><h3>Chez un agent PAY BUS</h3><p>Donnez votre carte et le montant à recharger. Le solde est mis à jour tout de suite.</p></div>
+<div class="box"><h3>Depuis une application partenaire</h3><p>Choisissez le service PAY BUS, entrez votre identifiant PAY BUS, vérifiez votre nom, puis validez le montant.</p></div>
+</div></div></section>
+
+<section id="proprietaires" class="alt"><div class="w">
+<h2>Propriétaires de bus : encaissez sans manipuler d'argent</h2>
+<p>Chaque trajet est enregistré automatiquement. Vous suivez les recettes de vos bus et l'état de votre abonnement PAY BUS dans un espace dédié. Le chauffeur n'a rien à calculer : il regarde simplement si le terminal affiche « accepté ».</p>
+<div class="cta"><a class="btn" href="#contact">Équiper mon bus</a></div>
+</div></section>
+
+<section id="faq"><div class="w">
+<h2>Vos questions</h2>
+<details><summary>Que se passe-t-il si mon solde est insuffisant ?</summary><p>Le terminal affiche « refusé » et rien n'est débité. Rechargez votre carte puis réessayez.</p></details>
+<details><summary>Et si je perds ma carte ?</summary><p>Contactez PAY BUS : la carte perdue est bloquée et votre solde peut être transféré sur une nouvelle carte.</p></details>
+<details><summary>Ma recharge peut-elle être comptée deux fois ?</summary><p>Non. Chaque recharge a un numéro unique et n'est créditée qu'une seule fois.</p></details>
+<details><summary>Où trouver un agent PAY BUS ?</summary><p>La liste des points de recharge sera publiée ici. Contactez-nous en attendant.</p></details>
+</div></section>
+
+<section id="contact" class="alt"><div class="w">
+<h2>Parlons de votre carte ou de votre bus</h2>
+<p>Écrivez-nous ou appelez-nous, nous vous répondons rapidement.</p>
+<div class="ct">
+<div><b>Téléphone</b><a href="tel:+25377595182">77 59 51 82</a></div>
+<div><b>E-mail</b><a href="mailto:paybus2026@gmail.com">paybus2026@gmail.com</a></div>
+<div><b>Ville</b>Djibouti</div>
+</div></div></section>
+
+<footer><div class="w"><div><b style="color:#fff">PAY BUS</b> · Simple. Rapide. Intelligent.</div>
+<div>© 2026 PAY BUS · <a href="#contact">Contact</a></div></div></footer>
+</body></html>
